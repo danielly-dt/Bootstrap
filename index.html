@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--https://getbootstrap.com/docs/5.3/getting-started/introduction/-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+
+    <style>
+        body{
+            padding: 80px;
+        }
+        #preco p{
+            width:300px;
+        }
+    </style>
+</head>
+<body><!-- .container>.row>.col*5>img+h3   clicar em enter, esse é um atalho para criar todo o sistema de grid;
+O Grid do Bootstrap é um sistema de colunas que divide a tela (ou a largura da página) em 12 partes iguais. 
+Ele serve para organizar e alinhar os elementos na página de forma responsiva — ou seja, que se adapta automaticamente
+a celulares, tablets e computadores.. -->
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <img src="https://placehold.co/180x180" alt="">
+            <h3>Produto</h3>
+        </div>
+        <div class="col">
+            <img src="https://placehold.co/180x180" alt="">
+            <h3>Produto</h3>
+        </div>
+        <div class="col">
+            <img src="https://placehold.co/180x180" alt="">
+            <h3>Produto</h3>
+        </div>
+        <div class="col">
+            <img src="https://placehold.co/180x180" alt="">
+            <h3>Produto</h3>
+        </div>
+        <div class="col">
+            <img src="https://placehold.co/180x180" alt="">
+            <h3>Produto</h3>
+        </div>
+    </div>
+</div>
+<!-- Depois ele ensina sobre tipografia no bootstrap, que é diferente...
+A fonte padrão do Bootstrap 5 é a "System UI stack", ou seja, 
+ele usa fontes do sistema operacional que o visitante estiver usando.
+O Bootstrap não usa uma fonte externa como Roboto ou Open Sans por padrão.
+Ele usa essa pilha de fontes: -->
+
+<!--Entao ele ensina a configuração de botoes do bootstrasp, muito legal! existe variações-->
+<button class="btn">Clique aqui</button> <!-- aqui sem borda-->
+<button class="btn btn-primary">Clique aqui</button> <!-- aqui em azul-->
+<button class="btn btn-secondary">Clique aqui</button>  <!-- aqui em cinza-->
+<button class="btn btn-success">Clique aqui</button> <!-- aqui em verde-->
+<button class="btn btn-danger">Clique aqui</button> <!-- aqui em vermelho-->
+<button class="btn btn-warning">Clique aqui</button><!-- aqui em amarelo-->
+<button class="btn btn-info">Clique aqui</button><!--aqui em azul-->
+<button class="btn btn-ligth">Clique aqui</button><!--aqui em cinza bem claro-->
+<button class="btn btn-dark">Clique aqui</button><!--aqui no preto-->
+<button class="btn btn-link">Clique aqui</button><!--aparencia de link-->
+<button class="btn btn-outline-primary">Clique aqui</button><!--aqui borda azul fundo branco,font azul;
+pode mudar para secondary, success, danger, warning, bem legal-->
+<button class="btn btn-secondary btn-lg">Clique aqui</button><!--aqui o tamanho grande(lg)(md) medio e (sm) pequeno-->
+</div>
+    </div>
+</div>
+
+<div class="accordion">
+<div class="accordion-item">
+    <div class="accordion-header">
+        <button class="accordion-button"data-bs-toggle="collapse" data-bs-target="#Resposta1">
+            pergunta
+        </button>
+        </div>
+        <div id="Resposta1" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+                Resposta da pergunta
+            </div>
+        </div>
+</div>
+
+<div class="accordion-item">
+    <div class="accordion-header">
+        <button class="accordion-button"data-bs-toggle="collapse" data-bs-target="#Resposta2">
+            pergunta
+        </button>
+        </div>
+        <div id="Resposta2" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                Resposta da pergunta
+            </div>
+        </div>
+</div>
+
+</div>
+
+<!--O HTML tem "segredinhos" nos atributos data-bs-*;
+O .dataset serve para ler esses segredos com JavaScript;
+É útil se você quiser criar algo personalizado ou ver o que está por trás do que o Bootstrap está fazendo.
+O bootstrap usa data-bs-* no HTML pra ativar botões, modais, acordeões, etc.
+O JavaScript acessa esses valores com .dataset.
+Isso te dá poder pra ver ou mudar o comportamento na mão, se quiser.-->
+
+
+<button class="btn btn-primary"data-bs-toggle="collapse"data-bs-target="#preco">
+    Ver preço
+</button>
+<div class="collapse collapse-horizontal"id="preco"><!--aqui se tirar o horizontal ele mostrará na vertical.-->
+    <p>
+        3x R$300,00
+    </p>
+</div>
+
+<!--Alertas e mensagens com bootstrap-->
+<div class="alert alert-primary alert-dismissible"><!--aqui o dismissible coloca o X do lado direito da tela-->
+    <button class="btn-close"data-bs-dismiss="alert"></button>
+    Sou uma mensagem de informação
+</div>
+<div class="alert alert-secondary">
+    Sou uma mensagem de informação
+</div>
+<div class="alert alert-info">
+    Sou uma mensagem de informação
+</div>
+<div class="alert alert-danger">
+    Sou uma mensagem de informação
+</div>
+<div class="alert alert-warning">
+    Sou uma mensagem de informação
+</div>
+<div class="alert alert-dark">
+    Sou uma mensagem de informação
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="alert alert-success">
+                confira as novidades do blog <a href="#">clicando aqui</a> 
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Ultimas postagens</h2>
+            <div class="container g-0">
+                <div class="row">
+                    <div class="col-md-4 post">
+                        <img src="https://placehold.co/180x180/"/>
+                        <h4 class="h5">Titulo da postagem</h4>
+                        <time>18/05/2025</time>
+                        <a class="btn btn-primary btn-sm"> Leia mais</a>
+                    </div>
+
+                    <div class="col-md-4 post">
+                        <img src="https://placehold.co/180x180/"/>
+                        <h4 class="h5">Titulo da postagem</h4>
+                        <time>18/05/2025</time>
+                        <a class="btn btn-primary btn-sm"> Leia mais</a>
+                    </div>
+
+                    <div class="col-md-4 post">
+                        <img src="https://placehold.co/180x180/"/>
+                        <h4 class="h5">Titulo da postagem</h4>
+                        <time>18/05/2025</time>
+                        <a class="btn btn-primary btn-sm"> Leia mais</a>
+                    </div>
+
+                    <div class="col-md-4 post">
+                        <img src="https://placehold.co/180x180/"/>
+                        <h4 class="h5">Titulo da postagem</h4>
+                        <time>18/05/2025</time>
+                        <a class="btn btn-primary btn-sm"> Leia mais</a>
+                    </div>
+
+                    <div class="col-md-4 post">
+                        <img src="https://placehold.co/180x180/"/>
+                        <h4 class="h5">Titulo da postagem</h4>
+                        <time>18/05/2025</time>
+                        <a class="btn btn-primary btn-sm"> Leia mais</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 d-flex justify-content-end">
+            <div>
+                <h2>Anunciantes</h2>
+                <img src="https://placehold.co/180x180/"/>
+            </div>
+        </div>
+    </div>
+    <div class="row>">
+        <div class="col">
+            <h2>Entre em contato</h2>
+            <form>
+                <label class="form label" for="nome">Seu nome:</label>
+                <input class="form-control" type="text" id="nome"/>
+                <label for="email"class="form-label">Seu e-mail</label>
+                <input id="email" type="email" class="form-control">
+                <label for="mensagem"class="form-label">Sua mensagem:</label>
+                <textarea id="mensagem" class="form-control"></textarea>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="aceito-termos">
+                    <label class="form-check-label" for="aceito-termos">Li e concordo com os termos do site</label>
+            </div>
+            <button class="btn btn-success">Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
